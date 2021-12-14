@@ -1,6 +1,6 @@
 ## Introductie
 
-Een Single Page Application die de top 15 posts op Reddit toont. Start mt Create-React-App en stylen met Styled Components.
+Een Single Page Application die de top 15 posts op Reddit toont. Start met Create-React-App en stylen met Styled Components.
 
 ### API
 
