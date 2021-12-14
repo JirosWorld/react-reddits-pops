@@ -38,7 +38,7 @@ function App() {
 
                 {posts.map((post) => {
                     // console.log(post.data);
-                    return <div>{post.data.upvote_ratio}</div>
+                    return <div key={post.data.name}>{post.data.upvote_ratio}</div>
                 })}
             </div>
             ;
