@@ -1,4 +1,4 @@
-.App {
+.main {
   text-align: center;
 }
 
@@ -6,6 +6,15 @@
   height: 40vmin;
   pointer-events: none;
 }
-.yellow {
+.posts {
+  padding: 1em;
   background-color: yellow;
+}
+.specific__post {
+  padding: 1em;
+  background-color: lightcoral;
+}
+.mapped__posts {
+  padding: 1em;
+  background-color: lightpink;
 }
