@@ -1,0 +1,9 @@
+.nav-container ul {
+    background-color: lightskyblue;
+    padding: 1.5em;
+    border-radius: 25px;
+    border: 2px lightskyblue solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

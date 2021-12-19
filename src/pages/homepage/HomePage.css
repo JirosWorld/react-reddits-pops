@@ -1,0 +1,32 @@
+.posts {
+    padding: 1em;
+    background-color: lightyellow;
+}
+.mapped__posts {
+    padding: 1em;
+    background-color: lightgoldenrodyellow;
+}
+.mapped__posts li {
+    margin: 5px 0 10px 0;
+    border-radius: 25px;
+    border: 2px lightskyblue solid;
+    background-color: white;
+}
+.mapped__post__title {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+.mapped__post__author {
+    font-size: 0.9em;
+    font-style: italic;
+    margin: 0 1em;
+}
+.mapped__post__subreddit {
+    color: maroon;
+    margin: 0 0.1em;
+}
+.mapped__post__votes {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 0 1em;
+}

@@ -2,10 +2,8 @@
 
 ## Inleiding
 
-Je gaat een kleine applicatie bouwen die de populairste 15 posts op Reddit ophaalt via hun API en deze op een webpagina laat
-zien. De gebruiker kan op de subreddit-klikken om hier meer informatie over te bekijken, of op de post zelf (en wordt
-dan doorgelinkt naar Reddit zelf). Je maakt gebruikt van dynamic routing voor de subreddit-detail-pagina, communiceert
-het laden van de posts met de gebruiker en bedenkt jouw eigen styling en/of layout voor dit project.
+Je gaat een kleine applicatie bouwen die de populairste 15 posts op Reddit ophaalt via hun API en deze op een webpagina laat zien. De gebruiker kan op de subreddit-klikken om hier meer informatie over te bekijken, of op de post zelf (en wordt
+dan doorgelinkt naar Reddit zelf). Je maakt gebruikt van dynamic routing voor de subreddit-detail-pagina, communiceert het laden van de posts met de gebruiker en bedenkt jouw eigen styling en/of layout voor dit project.
 
 ### Informatie op de homepagina
 
@@ -51,9 +49,7 @@ Number of subscribers
 Jouw applicatie voldoet aan de volgende voorwaarden:
 
 - Je zet het project zelf op, from scratch. _Let op_: ook git initialiseer je zelf. Daarna zorg je dat je de main branch direct naar GitHub pusht, een nieuwe branch aanmaakt en dan daarop verder werkt. Anders heb je straks geen Pull Request die kan worden nagekeken.
-- De applicatie bevat slechts twee pagina's: één home-pagina en één subreddit-specificatie-pagina die informatie over
-  iedere subreddit weer zou kunnen geven. Hij is dus herbruikbaar. Hier gebruik je dynamic routing en dynamic params
-  voor.
+- De applicatie bevat slechts twee pagina's: één home-pagina en één subreddit-specificatie-pagina die informatie over iedere subreddit weer zou kunnen geven. Hij is dus herbruikbaar. Hier gebruik je dynamic routing en dynamic params voor.
 - Om de top 15 hottest posts op te halen, gebruik je het volgende endpoint: `GET https://www.reddit.com/hot.json?limit=15`.
   Je hebt geen API key nodig.
 - Om de informatie over de subreddit `r/tumblr` op te halen, gebruik je het volgende API

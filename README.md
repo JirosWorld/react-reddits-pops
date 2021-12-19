@@ -1,6 +1,6 @@
 ## Introductie
 
-Een Single Page Application die de top 15 posts op Reddit toont. Start met Create-React-App en stylen met Styled Components.
+Een Single Page Application die de top 15 posts op Reddit toont. Via het maken va nee nReact project from scratch.
 
 * Link naar de README van de opdracht: [Markdown reddit opdracht](README_OPDRACHT.md).
 * Link naar de PDF van de opdracht: [PDF reddit opdracht](REACT_Les5RedditOpdracht.pdf).
