@@ -5,13 +5,10 @@ import {
 } from "react-router-dom";
 import './App.css';
 import HomePage from "./pages/homepage/HomePage";
-import SubPage from "./pages/subpage/SubPage";
+import PostPage from "./pages/postpage/PostPage";
+import SubReddit from "./pages/subreddit/SubReddit";
 
 function App() {
-
-//     //mounting fase
-//     useEffect(() => {
-//     }, []);
 
     return (
         <main className="main">
@@ -20,7 +17,10 @@ function App() {
                     <HomePage />
                 </Route>
                 <Route exact path="/subpage" >
-                    <SubPage />
+                    <PostPage />
+                </Route>
+                <Route path="/:subreddit">
+                    <SubReddit />
                 </Route>
             </Switch>
         </main>

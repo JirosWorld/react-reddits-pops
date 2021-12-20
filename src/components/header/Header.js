@@ -1,15 +1,15 @@
 import React from 'react';
 import logo from "../../logo.svg";
-import TopNav from "../topnav/TopNav";
 import "./Header.css"
 
 function Header({title}) {
     return (
         <>
-            <TopNav/>
             <header>
                 <div className="title-container">
-                    <img src={logo} className="App-logo" alt={title}/>
+                    <img src={logo} className="App-logo" alt={title}
+                         height="100"
+                         width="100" />
                     <h1>{title}</h1>
                 </div>
             </header>

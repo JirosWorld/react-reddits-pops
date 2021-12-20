@@ -1,12 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import logo from "../../logo.svg";
-import "./SubPage.css"
+import "./PostPage.css"
 import Header from "../../components/header/Header";
 import Button from "../../components/button/Button";
 import Loader from "../../components/loader/Loader";
+import TopNav from "../../components/topnav/TopNav";
 
-function SubPage() {
+function PostPage() {
 
     const [specificPost, setSpecificPost] = useState({});
     const [loading, toggleLoading] = useState(false);
@@ -15,7 +16,7 @@ function SubPage() {
     //mounting fase
     useEffect(() => {
         //de functie om data op te halen
-        async function fetchSpecificPosts() {
+        async function fetchSpecificPost() {
             //zet de error steeds op leeg, iedere keer bij laden van data
             setError('');
             //zet de loader animatie aan zolang data wordt geladen
@@ -23,7 +24,7 @@ function SubPage() {
             try {
                 // await request:
                 const result = await axios.get('https://www.reddit.com/hot.json?limit=15');
-                // sla alleen de allereerste post op
+                // sla alleen de allereerste populairste post op
                 setSpecificPost(result.data.data.children[0]);
                 console.log("1 single post:");
                 console.log(result.data.data.children[0]);
@@ -34,7 +35,7 @@ function SubPage() {
             toggleLoading(false);
         }
 
-        fetchSpecificPosts();
+        fetchSpecificPost();
 
     }, []);
     // console.log("thumbnail test: ");
@@ -42,6 +43,8 @@ function SubPage() {
 
     return (
         <div className="subpage">
+            <TopNav/>
+            <Button/>
             <Header
                 icon={logo}
                 title="Reddit's one single most popular post"
@@ -51,19 +54,34 @@ function SubPage() {
                 <div className="specific__post">
                     {loading && <Loader/>}
                     <span className="thumbnail-container">
-                        {Object.keys(specificPost).length > 0 && specificPost.data.thumbnail.length > 7 ? <img src={`${specificPost.data.thumbnail}`} alt="thumbnail" className="thumbnail"/> : <img src={logo} alt="thumbnail" className="thumbnail" /> }
+                        {/* met objectkeys eerst checken of data is binnengekomen, daarna conditioneel renderen */}
+                        {Object.keys(specificPost).length > 0 && specificPost.data.thumbnail.length > 7 ?
+                            <img src={`${specificPost.data.thumbnail}`} alt="thumbnail" className="thumbnail"/> :
+                            <img src={logo} alt="thumbnail" className="thumbnail" height="150" width="150"/>}
                     </span>
                     {/* dit is vast een ontzettend flauwe manier om externe links te maken? */}
                     <a href={`https://www.reddit.com${Object.keys(specificPost).length > 0 && specificPost.data.permalink}`}
                        rel="noreferrer" target="_blank">
-                        {Object.keys(specificPost).length > 0 && specificPost.data.title}
+                        <h2>{Object.keys(specificPost).length > 0 && specificPost.data.title}</h2>
                     </a>
                     <br/> by: <br/>
                     {Object.keys(specificPost).length > 0 && specificPost.data.author}
-                    <p>From the subreddit: /r/<a href={`https://www.reddit.com/r/${Object.keys(specificPost).length > 0 && specificPost.data.subreddit}`} rel="noreferrer" target="_blank">
+                    <p>From the subreddit: /r/<a
+                        href={`https://www.reddit.com/r/${Object.keys(specificPost).length > 0 && specificPost.data.subreddit}`}
+                        rel="noreferrer" target="_blank">
                         {Object.keys(specificPost).length > 0 && specificPost.data.subreddit}
                     </a>
                     </p>
+                    <article className="specific__post__content">
+                        <p>Description (if any): <br/> {Object.keys(specificPost).length > 0 && specificPost.data.description}</p></article>
+                    <br/>
+                    | <span className="mapped__post__votes">Vote: {Object.keys(specificPost).length > 0 && specificPost.data.upvote_ratio}</span> |
+
+                    {/* Poging om getallen naar nette puntnotatie te zetten */}
+                    <span
+                        className="mapped__post__upvotes"> Upvotes: {Object.keys(specificPost).length > 0 && parseFloat(specificPost.data.ups).toLocaleString('nl')}</span> |
+                    <span
+                        className="mapped__post__comments"> Comments: {Object.keys(specificPost).length > 0 && parseFloat(specificPost.data.num_comments).toLocaleString('nl')}</span> |
                 </div>
             </div>
             <Button/>
@@ -71,4 +89,4 @@ function SubPage() {
     );
 }
 
-export default SubPage;
+export default PostPage;

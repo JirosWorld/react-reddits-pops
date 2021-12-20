@@ -7,6 +7,7 @@ import './index.css';
 import App from './App';
 
 console.log("Reddit heeft een leuke console:\n" +
+    " \n" +
     "                  ,d\"=≥,.,qOp,\n" +
     "                 ,7'  ''²$(  )\n" +
     "                ,7'      '?q$7'\n" +
