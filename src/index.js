@@ -1,10 +1,11 @@
-import React from 'react';
+import React from "react";
 import ReactDOM from 'react-dom';
 import {
     BrowserRouter as Router
 } from "react-router-dom";
 import './index.css';
 import App from './App';
+
 
 console.log("Reddit heeft een leuke console:\n" +
     " \n" +
@@ -31,6 +32,8 @@ console.log("Reddit heeft een leuke console:\n" +
     "       ,²²'?,.      .,?'²²,\n" +
     "      ²==--≥²²==--==²²≤--==²\n" +
     "\n");
+
+// BrowserRouter om de gehele app heen
 
 ReactDOM.render(
   <React.StrictMode>

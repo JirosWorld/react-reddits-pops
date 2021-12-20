@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useEffect, useState} from "react";
+// useEffect ook nodig om de browser title te veranderen
 import {
     Switch,
     Route
@@ -9,6 +10,11 @@ import PostPage from "./pages/postpage/PostPage";
 import SubReddit from "./pages/subreddit/SubReddit";
 
 function App() {
+
+    // Title veranderen bij mounting
+    useEffect(() => {
+        document.title = "Jiro's Reddit site!"
+    }, []);
 
     return (
         <main className="main">
