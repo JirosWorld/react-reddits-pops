@@ -7,6 +7,7 @@ import Loader from "../../components/loader/Loader";
 import "./SubReddit.css";
 import logo from "../../logo.svg";
 import TopNav from "../../components/topnav/TopNav";
+// import parseNumberToDotsString from "../../helpers/parseToDots";
 
 function SubReddit() {
     const [subInfo, setSubInfo] = useState();
@@ -15,11 +16,13 @@ function SubReddit() {
     const {subreddit: subredditName} = useParams();
 
     const [subredditView, toggleSubredditView ] = useState(false);
-    //extra menuitem zichtbaar op subreddit page only, wil ik gebruiken voor activeClass
-    //maar lukt niet
+    // extra menuitem zichtbaar op subreddit page only, wil ik gebruiken voor activeClass
+    // maar is niet gelukt: de activeClass wordt alleen actief bij klikken in menu
+    // niet bij klikken op andere links
 
     //mounting fase
     useEffect(() => {
+        document.title = "Subreddit :: Jiro's Reddit site!"
         async function getResults() {
             //zet de error steeds op leeg, iedere keer bij laden van data
             setError('');
@@ -83,10 +86,14 @@ function SubReddit() {
                     <p className="subreddit__description">{subInfo.public_description}</p>
                     <h3 className="subreddit__heading">Subscribers:</h3>
                     <p className="subreddit__subscribers">{parseFloat(subInfo.subscribers).toLocaleString('nl')}</p>
+
+                    {/* data omzetten naar puntjes met mijn helper functie - WERKT NIET */}
+                    {/*<p className="subreddit__subscribers">{parseToDots(subInfo.subscribers)}</p>*/}
                 </section>
-                <Button/>
+
             </div>
             }
+            <Button/>
         </section>
     );
 }

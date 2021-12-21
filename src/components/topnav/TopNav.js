@@ -14,7 +14,7 @@ function TopNav({subredditView, children}) {
                         <NavLink to="/" exact activeClassName="active-link">Home</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/subpage" activeClassName="active-link">Postpagina</NavLink>
+                        <NavLink to="/postpage" activeClassName="active-link">Postpagina</NavLink>
                     </li>
                     {children}
                     <li><strong>☰</strong></li>

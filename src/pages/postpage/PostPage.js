@@ -15,6 +15,7 @@ function PostPage() {
 
     //mounting fase
     useEffect(() => {
+        document.title = "nr. 1 Post :: Jiro's Reddit site!"
         //de functie om data op te halen
         async function fetchSpecificPost() {
             //zet de error steeds op leeg, iedere keer bij laden van data
@@ -46,7 +47,6 @@ function PostPage() {
             <TopNav/>
             <Button/>
             <Header
-                icon={logo}
                 title="Reddit's one single most popular post"
             />
             {error && <p className="error-message">{error}</p>}

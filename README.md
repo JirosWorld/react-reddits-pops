@@ -9,33 +9,35 @@ Dit is een Single Page Application die de top 15 posts op Reddit toont. Ik heb d
 
 - Tijdens het ophalen van de data kan de gebruiker duidelijk zien dat dat er informatie geladen wordt via het draaiende loading SVG'tje;
 - Als er iets mis gaat bij het ophalen van de data, verschijnt er een foutmelding op de pagina;
-- Op de subreddit-pagina staat een SVG-icoon (in de `assets` map) voor de `< Back to overview`-link
-- In het tabblad wordt een eigen Favicon en titel weergegeven (= mijn eigen *luiaard* avatar)
+- Op de subreddit-pagina staat een SVG-icoon voor de `< Back to overview`-link
+- In het tabblad wordt een eigen Favicon en Titles weergegeven (= mijn eigen *luiaard* avatar)
 - Eigen styling en layout;
-- Een duidelijke `README.md` met installatiehandleiding (scroll naar beden voor installatie hulp).
+- Een duidelijke `README.md` met installatiehandleiding (scroll naar beneden voor installatie hulp).
 
 ## Niet gedaan
 
 - ik weet geen universele manier om _alle_ getallen in 1X om te zetten naar nette puntnotatie.
-- ik wil dat het navigatiemenu meeverandert met de 'active link' color zodra je op de subreddit pagina komt, maar die stijl verandert alleen als je echt OP het menu item klikt...?
+- ik wil dat het navigatiemenu meeverandert met de 'active link' color zodra je op de subreddit pagina komt, maar dit lukt niet; die stijl verandert alleen als je echt OP het menu item klikt...?
 
 ## De Applicatie installeren en starten
 
-Als je het project gecloned hebt naar jouw locale machine, installeer dan eerst de node_modules door het volgende commando in een terminal te runnen:
+Als je het project gecloned hebt naar jouw locale machine, en je in de juiste directory staat, installeer dan eerst de node_modules door het volgende commando in een terminal te runnen:
 
 `npm install`
 
-Als je dit project opent in Webstorm kun je ook het NPM START afspeelknopje gebruiken.
+Als je dit project opent in een IDE zoals Webstorm dan kun je ook het NPM START afspeelknopje gebruiken.
 
-Wanneer dit klaar is, kun je de applicatie starten met behulp van:
+Wacht na de installatie geduldig totdat alle depencies geïndexeerd zijn. Wanneer dit klaar is, kun je de applicatie starten met behulp van:
 
 `npm start`
 
 Open http://localhost:3000 om de pagina in een browser te bekijken.
 
-Axios, React Router 5.2 (legacy), en React-Hook-Form zijn reeds gesaved in JSON builder.
+*Handig:*
 
-In de terminal kan de front-end app gestopt worden met `ctrl` + `'C'`.
+- Axios, React Router 5.2 (legacy), en React-Hook-Form zijn reeds gesaved in JSON package builder, dus die installeren vanzelf mee bij een `npm install`.
+
+- In de terminal kan de front-end app gestopt worden met `ctrl` + `'C'`.
 
 ## Hoe te gebruiken
 

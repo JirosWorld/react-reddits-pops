@@ -16,6 +16,7 @@ function HomePage() {
 
     //mounting fase
     useEffect(() => {
+        document.title = "HOME :: Jiro's Reddit site!"
         //de functie om data op te halen
         async function fetchPopularPosts() {
             //zet de error steeds op leeg, iedere keer bij laden van data

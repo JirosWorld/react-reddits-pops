@@ -22,7 +22,7 @@ function App() {
                 <Route exact path="/">
                     <HomePage />
                 </Route>
-                <Route exact path="/subpage" >
+                <Route exact path="/postpage" >
                     <PostPage />
                 </Route>
                 <Route path="/:subreddit">
