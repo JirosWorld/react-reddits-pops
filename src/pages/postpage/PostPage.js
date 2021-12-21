@@ -77,7 +77,7 @@ function PostPage() {
                     <br/>
                     | <span className="mapped__post__votes">Vote: {Object.keys(specificPost).length > 0 && specificPost.data.upvote_ratio}</span> |
 
-                    {/* Poging om getallen naar nette puntnotatie te zetten */}
+                    {/* Getallen naar nette puntnotatie zetten */}
                     <span
                         className="mapped__post__upvotes"> Upvotes: {Object.keys(specificPost).length > 0 && parseFloat(specificPost.data.ups).toLocaleString('nl')}</span> |
                     <span

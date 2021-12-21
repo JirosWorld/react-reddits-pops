@@ -97,7 +97,7 @@ function HomePage() {
                                 <br/>
                                 |<span className="mapped__post__votes">Vote: {post.data.upvote_ratio}</span>|
 
-                                {/* Poging om getallen naar nette puntnotatie te zetten */}
+                                {/* Getallen naar nette puntnotatie zetten */}
                                 <span
                                     className="mapped__post__upvotes">Upvotes: {parseFloat(post.data.ups).toLocaleString('nl')}</span>|
                             <span

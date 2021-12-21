@@ -7,7 +7,7 @@ import Loader from "../../components/loader/Loader";
 import "./SubReddit.css";
 import logo from "../../logo.svg";
 import TopNav from "../../components/topnav/TopNav";
-// import parseNumberToDotsString from "../../helpers/parseToDots";
+import parseToDots from "../../helpers/parseToDots";
 
 function SubReddit() {
     const [subInfo, setSubInfo] = useState();
@@ -85,10 +85,9 @@ function SubReddit() {
                     <h2 className="subreddit__heading">Description</h2>
                     <p className="subreddit__description">{subInfo.public_description}</p>
                     <h3 className="subreddit__heading">Subscribers:</h3>
-                    <p className="subreddit__subscribers">{parseFloat(subInfo.subscribers).toLocaleString('nl')}</p>
 
-                    {/* data omzetten naar puntjes met mijn helper functie - WERKT NIET */}
-                    {/*<p className="subreddit__subscribers">{parseToDots(subInfo.subscribers)}</p>*/}
+                     {/* data omzetten naar puntjes met mijn helper functie  */}
+                    <p className="subreddit__subscribers">{parseToDots(subInfo.subscribers)}</p>
                 </section>
 
             </div>
