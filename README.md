@@ -5,9 +5,13 @@ Dit is een Single Page Application die de top 15 posts op Reddit toont. Ik heb d
 * Link naar de README van de opdracht: [Markdown reddit opdracht](README_OPDRACHT.md).
 * Link naar de PDF van de opdracht: [PDF reddit opdracht](REACT_Les5RedditOpdracht.pdf).
 
+#### Eindresultaat:
+
+![Screenshot eindresultaat](src/assets/Screenshot.png)
+
 ## Wel gedaan
 
-- Tijdens het ophalen van de data kan de gebruiker duidelijk zien dat dat er informatie geladen wordt via het draaiende loading SVG'tje;
+- Tijdens het ophalen van de data kan de gebruiker duidelijk zien dat er informatie geladen wordt via het draaiende loading SVG'tje;
 - Als er iets mis gaat bij het ophalen van de data, verschijnt er een foutmelding op de pagina;
 - Op de subreddit-pagina staat een SVG-icoon voor de `< Back to overview`-link
 - In het tabblad wordt een eigen Favicon en Titles weergegeven (= mijn eigen *luiaard* avatar)

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Roboto+Condensed:wght@300&display=swap');
 
 body {
+  background-color: #b5cdd9;
   display: flex;
   flex-direction: column;
   align-items: center;
