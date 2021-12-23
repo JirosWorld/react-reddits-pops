@@ -1,0 +1,24 @@
+.nav-container ul {
+    background-color: lightskyblue;
+    padding: 1.5em;
+    border-radius: 25px;
+    border: 5px #FFF solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.nav-container a {
+    color: crimson;
+    font-weight: bold;
+}
+
+.active-link {
+    padding: 1em;
+    border-radius: 10px;
+    background-color: #e7f5fe;
+}
+
+.nav-container a.active-link {
+    text-decoration: none;
+}
